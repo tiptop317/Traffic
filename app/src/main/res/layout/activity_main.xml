@@ -13,7 +13,7 @@
         android:textSize="@dimen/h1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:textColor="@color/text" />
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
