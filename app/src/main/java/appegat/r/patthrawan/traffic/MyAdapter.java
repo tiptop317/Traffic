@@ -1,9 +1,13 @@
 package appegat.r.patthrawan.traffic;
 
 import android.content.Context;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by ADMIN-IT on 25/8/2558.
@@ -22,7 +26,7 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return 0;
+        return titleStrings.length;
     }
 
     @Override
@@ -37,6 +41,17 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+        LayoutInflater objLayoutInflater = (LayoutInflater) objCOContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View objView1 = objLayoutInflater.inflate(R.layout.traffic_listview, viewGroup, false);
+
+        //Show Icon
+        ImageView iconImageView = (ImageView) objView1.findViewById(R.id.imvIcon);
+        iconImageView.setImageResource(iconInts[i]);
+
+        //Show Title
+        TextView titleTextView = (TextView) objView1.findViewById(R.id.txtTitle);
+        titleTextView.setText(titleStrings[i]);
+
+        return objView1;
     }
 }   //Main Class

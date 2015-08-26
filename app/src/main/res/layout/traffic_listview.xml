@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtTitle"
-        android:textSize="@dimen/h1"
+        android:textSize="@dimen/h2"
         android:textStyle="bold"
         android:layout_gravity="center_vertical"
         android:textColor="@color/text" />
